@@ -13,13 +13,25 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
       home: Scaffold(
+        bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home, color: Color(0xFF146c43)),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person, color: Color(0xFF146c43)),
+              label: 'Perfil',
+            ),
+          ],
+        ),
         backgroundColor: Colors.white,
         appBar: AppBar(
           iconTheme: IconThemeData(color: Colors.white),
           backgroundColor: Color(0xFF146c43),
           actions: [
             Padding(
-              padding: EdgeInsets.only(left: 50.0),
+              padding: EdgeInsets.only(right: 20),
               child: Icon(Icons.menu),
             ),
           ],
@@ -33,47 +45,156 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-        body: Center(
+        body: SizedBox(
+          width: double.infinity,
+          height: double.infinity,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.red,
+                  color: Colors.green.shade50,
                 ),
-                child: Icon(Icons.person, color: Colors.green, size: 40),
+                child: Icon(Icons.person, color: Color(0xFF146C43), size: 48),
                 width: 96,
                 height: 96,
               ),
-              Container(height: 50, width: 50, color: Colors.black),
+              SizedBox(height: 12),
+              Text(
+                "Gustavo Deola",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
+              ),
+              SizedBox(height: 4),
+              Text(
+                "Desenvolvedor Flutter",
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey.shade500,
+                ),
+              ),
+              SizedBox(height: 20),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  SizedBox(width: 12),
+                  Container(
+                    padding: EdgeInsets.symmetric(vertical: 12),
+                    width: 100,
+                    height: 100.0,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey.shade300),
+                      borderRadius: BorderRadius.circular(8),
+                      color: Colors.white,
+                    ),
+                    child: Column(
+                      children: [
+                        Icon(Icons.article, size: 24, color: Color(0xFF146C43)),
+                        SizedBox(height: 4),
+                        Text(
+                          "10",
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          'Posts',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.grey.shade600,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
 
-              Container(height: 50, width: 50, color: Colors.amber),
-              // Row(
-              //   mainAxisSize: MainAxisSize.min,
-              //   children: [
-              //     Container(width: 100, height: 100.0, color: Colors.yellow),
+                  Container(
+                    padding: EdgeInsets.symmetric(vertical: 12),
+                    decoration: BoxDecoration(
+                      // border: Border.all(color: Colors.grey.shade300),
+                      // borderRadius: BorderRadius.circular(8),
+                      color: Colors.white,
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [SizedBox(height: 4)],
+                    ),
+                  ),
 
-              //     SizedBox(width: 12),
-
-              //     Container(
-              //       padding: EdgeInsets.symmetric(vertical: 12),
-              //       decoration: BoxDecoration(
-              //         border: Border.all(color: Colors.grey.shade300),
-              //         borderRadius: BorderRadius.circular(8),
-              //         color: Colors.white,
-              //       ),
-              //     ),
-
-              //     SizedBox(width: 12),
-
-              //     Container(
-              //       width: 100,
-              //       height: 100.0,
-              //       color: Color.fromARGB(255, 103, 194, 255),
-              //     ),
-              //   ],
-              // ),
+                  SizedBox(width: 12),
+                  Container(
+                    padding: EdgeInsets.symmetric(vertical: 12),
+                    width: 100,
+                    height: 100.0,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey.shade300),
+                      borderRadius: BorderRadius.circular(8),
+                      color: Colors.white,
+                    ),
+                    child: Column(
+                      children: [
+                        Icon(Icons.group, size: 24, color: Color(0xFF146C43)),
+                        SizedBox(height: 4),
+                        Text(
+                          "1020",
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          'Seguidores',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.grey.shade600,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 12),
+                  Container(
+                    padding: EdgeInsets.symmetric(vertical: 12),
+                    width: 100,
+                    height: 100.0,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey.shade300),
+                      borderRadius: BorderRadius.circular(8),
+                      color: Colors.white,
+                    ),
+                    child: Column(
+                      children: [
+                        Icon(
+                          Icons.person_add,
+                          size: 24,
+                          color: Color(0xFF146C43),
+                        ),
+                        SizedBox(height: 4),
+                        Text(
+                          "900",
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          'Seguindo',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.grey.shade600,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
