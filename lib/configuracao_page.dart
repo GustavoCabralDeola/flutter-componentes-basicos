@@ -136,104 +136,116 @@ class ConfiguracaoPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Icon(Icons.workspace_premium, color: Color(0xFF146C43)),
+
                   SizedBox(width: 12),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Plano Premium",
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
-                      ),
-                      SizedBox(height: 8),
-                      Container(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 8,
-                          vertical: 4,
-                        ),
-                        decoration: BoxDecoration(
-                          color: Colors.green.shade100,
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Text(
-                          "Ativo",
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w600,
-                            color: Color(0xFF146C43),
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 4),
-                      Text(
-                        "Armazenamento utilizado",
-                        style: TextStyle(fontSize: 12),
-                      ),
-                      SizedBox(height: 20),
-                      Row(
-                        children: [
-                          Container(
-                            padding: EdgeInsets.symmetric(vertical: 12),
-                            width: 100,
-                            height: 100,
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Colors.grey.shade300),
-                              borderRadius: BorderRadius.circular(8),
-                              color: Colors.white,
+
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Text(
+                              "Plano Premium",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                            child: Column(
-                              children: [
-                                Icon(Icons.devices, color: Color(0xFF146C43)),
-                                Text(
-                                  "3",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                ),
-                                Text(
-                                  "Dispositivos",
-                                  style: TextStyle(fontSize: 12),
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(width: 30),
-                          Container(
-                            padding: EdgeInsets.symmetric(vertical: 12),
-                            width: 100,
-                            height: 100,
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Colors.grey.shade300),
-                              borderRadius: BorderRadius.circular(8),
-                              color: Colors.white,
-                            ),
-                            child: Column(
-                              children: [
-                                Icon(
-                                  Icons.calendar_today,
+
+                            Spacer(),
+
+                            Container(
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 10,
+                                vertical: 4,
+                              ),
+                              decoration: BoxDecoration(
+                                color: Colors.green.shade100,
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: Text(
+                                "Ativo",
+                                style: TextStyle(
                                   color: Color(0xFF146C43),
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 12,
                                 ),
-                                Text(
-                                  "12 dias",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  "Expira em",
-                                  style: TextStyle(fontSize: 12),
-                                ),
-                              ],
+                              ),
                             ),
-                          ),
-                        ],
-                      ),
-                    ],
+                          ],
+                        ),
+
+                        SizedBox(height: 4),
+
+                        Text(
+                          "Armazenamento utilizado",
+                          style: TextStyle(fontSize: 12),
+                        ),
+
+                        SizedBox(height: 20),
+                        Row(
+                          children: [
+                            Container(
+                              padding: EdgeInsets.symmetric(vertical: 12),
+                              width: 100,
+                              height: 100,
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey.shade300),
+                                borderRadius: BorderRadius.circular(8),
+                                color: Colors.white,
+                              ),
+                              child: Column(
+                                children: [
+                                  Icon(Icons.devices, color: Color(0xFF146C43)),
+                                  Text(
+                                    "3",
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                  Text(
+                                    "Dispositivos",
+                                    style: TextStyle(fontSize: 12),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(width: 30),
+                            Container(
+                              padding: EdgeInsets.symmetric(vertical: 12),
+                              width: 100,
+                              height: 100,
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey.shade300),
+                                borderRadius: BorderRadius.circular(8),
+                                color: Colors.white,
+                              ),
+                              child: Column(
+                                children: [
+                                  Icon(
+                                    Icons.calendar_today,
+                                    color: Color(0xFF146C43),
+                                  ),
+                                  Text(
+                                    "12 dias",
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Text(
+                                    "Expira em",
+                                    style: TextStyle(fontSize: 12),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
